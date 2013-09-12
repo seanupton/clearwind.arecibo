@@ -103,6 +103,7 @@ class PostThread(threading.Thread):
         self.url = url
         self.headers = headers
         self.data = data
+        self.daemon = True
     
     def run(self):
         url = urlparse(self.url)
